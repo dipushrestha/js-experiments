@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 1200px;
+  height: 650px;
+  margin: 5px auto;
+  position: relative;
+  border: 2px solid #99a3a4;
+  background-color: #f8f9f9;
+}
+
+.ball {
+  border-radius: 50%;
+  position: absolute;
+}
