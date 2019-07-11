@@ -71,14 +71,14 @@ function draw() {
 
   ctx.beginPath();
   ctx.setLineDash([50, 30]);
-  ctx.moveTo(130, 0);
-  ctx.lineTo(130, GAME_HEIGHT);
+  ctx.moveTo(GAME_WIDTH / 3, 0);
+  ctx.lineTo(GAME_WIDTH / 3, GAME_HEIGHT);
   ctx.stroke();
 
   ctx.beginPath();
   ctx.setLineDash([50, 30]);
-  ctx.moveTo(130 * 2, 0);
-  ctx.lineTo(130 * 2, GAME_HEIGHT);
+  ctx.moveTo((GAME_WIDTH / 3) * 2, 0);
+  ctx.lineTo((GAME_WIDTH / 3) * 2, GAME_HEIGHT);
   ctx.stroke();
 
   ctx.fillStyle = '#008080';

@@ -4,6 +4,8 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+const GAME_WIDTH = 390;
+
 export default class Car {
   constructor(isPlayer) {
     this.y = -80;
@@ -20,12 +22,12 @@ export default class Car {
     } else {
       this.roadLane = getRandomInt(0, 2);
     }
-    this.x = this.roadLane * 130 + this.width;
+    this.x = (this.roadLane * GAME_WIDTH) / 3 + this.width;
   }
 
   changeLane(lane) {
     this.roadLane = lane;
-    this.x = this.roadLane * 130 + this.width;
+    this.x = (this.roadLane * GAME_WIDTH) / 3 + this.width;
   }
 
   hasCollided(car) {
