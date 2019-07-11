@@ -10,6 +10,7 @@ class Carousel {
   constructor(containerId, options) {
     this.container = document.getElementById(containerId);
     this.imageWrapper = document.querySelector('.carousel-image-wrapper');
+    this.imageWrapper.classList.add('clearfix');
     this.images = this.imageWrapper.children;
     this.currentIndex = 0;
     this.indicators = [];
@@ -85,7 +86,7 @@ class Carousel {
     let start = this.currentIndex * this.width;
     let end = index * this.width;
     let distance = end - start;
-    let speed = 10;
+    let speed = 0.01;
     let progress = 0;
 
     clearInterval(this.slider);
@@ -99,7 +100,7 @@ class Carousel {
         clearInterval(this.move);
         this.animate();
       }
-    }, speed);
+    }, speed * 1000);
 
     this.indicators.children[this.currentIndex].classList.remove('active');
     this.currentIndex = index;
