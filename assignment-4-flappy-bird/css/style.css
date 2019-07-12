@@ -1,0 +1,14 @@
+canvas {
+  display: block;
+  margin: 0 auto;
+}
+
+.start-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 32px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+}
