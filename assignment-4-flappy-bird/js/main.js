@@ -24,6 +24,8 @@ let score;
 let requestId;
 let tubes = [];
 
+loadImage([background, floor, tubeUpImage, tubeDownImage, birdImage]);
+
 let startButton = startScreen();
 
 window.addEventListener('keydown', spaceKey);
@@ -31,6 +33,18 @@ window.addEventListener('keydown', spaceKey);
 function spaceKey(e) {
   if (e.code === 'Space') {
     bird.fly();
+  }
+}
+
+function loadImage(imgArr) {
+  for (let img of imgArr) {
+    if (img.complete) {
+      console.log('loaded');
+    } else {
+      img.addEventListener('load', function() {
+        console.log('load');
+      });
+    }
   }
 }
 
